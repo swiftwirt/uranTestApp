@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  URTFileTableViewController.h
 //  URANTest
 //
 //  Created by Ivashin Dmitry on 2/25/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface URTFileTableViewController : UITableViewController
 
 @end
-
