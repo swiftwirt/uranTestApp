@@ -1,13 +1,13 @@
 //
-//  URTFileModel.m
+//  URTFile.m
 //  URANTest
 //
 //  Created by Ivashin Dmitry on 2/25/17.
 //  Copyright © 2017 Ivashin Dmitry. All rights reserved.
 //
 
-#import "URTFileModel.h"
+#import "URTFile.h"
 
-@implementation URTFileModel
+@implementation URTFile
 
 @end

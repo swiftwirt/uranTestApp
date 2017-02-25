@@ -7,7 +7,7 @@
 //
 
 #import <MGSwipeTableCell/MGSwipeTableCell.h>
-#import "URTFileModel.h"
+#import "URTFile.h"
 
 @interface URTFileCell : MGSwipeTableCell
 
@@ -16,6 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *fileNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *fileModifiedDateLabel;
 
-@property (weak, nonatomic) URTFileModel *fileModel;
+@property (weak, nonatomic) URTFile *fileModel;
 
 @end

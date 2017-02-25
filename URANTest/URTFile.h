@@ -1,5 +1,5 @@
 //
-//  URTFileModel.h
+//  URTFile.h
 //  URANTest
 //
 //  Created by Ivashin Dmitry on 2/25/17.
@@ -13,7 +13,7 @@ typedef NS_ENUM(NSUInteger, FileType) {
     Movie = 1,
 };
 
-@interface URTFileModel : NSObject
+@interface URTFile : NSObject
 
 @property (nonatomic, strong) NSString *filename;
 @property (nonatomic, strong) NSString *isFolder;

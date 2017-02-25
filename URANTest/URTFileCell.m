@@ -17,7 +17,7 @@
 
 @implementation URTFileCell
 
--(void)setFileModel:(URTFileModel *)fileModel
+-(void)setFileModel:(URTFile *)fileModel
 {
     self.colorTagView.backgroundColor = fileModel.isBlue && !fileModel.isOrange ? [UIColor blueColor] : [UIColor orangeColor]; // for case when both color BOOL = true set orange as default
     self.fileTypeImageView.image = fileModel.isFolder ? self.folderImaage : [self getFileTypeImageFrom:fileModel];
@@ -32,10 +32,11 @@
 
 -(UIImage *)folderImaage
 {
-    return [UIImage imageNamed:@"icon_folder"];
+    if (!_folderImaage) [UIImage imageNamed:@"icon_folder"];
+    return _folderImaage;
 }
 
--(UIImage *)getFileTypeImageFrom:(URTFileModel *) model
+-(UIImage *)getFileTypeImageFrom:(URTFile *) model
 {
     switch (model.fileType) {
         case Image:

@@ -14,8 +14,11 @@
 		D0D0966F1E617BA200CD19AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D0966D1E617BA200CD19AF /* LaunchScreen.storyboard */; };
 		D0D0967F1E61821D00CD19AF /* URTInitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D0967E1E61821D00CD19AF /* URTInitialScreen.storyboard */; };
 		D0D096821E61823400CD19AF /* URTFileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D096811E61823400CD19AF /* URTFileTableViewController.m */; };
-		D0D096861E61833300CD19AF /* URTFileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D096851E61833300CD19AF /* URTFileModel.m */; };
+		D0D096861E61833300CD19AF /* URTFile.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D096851E61833300CD19AF /* URTFile.m */; };
 		D0D096901E6189CC00CD19AF /* URTFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0968F1E6189CC00CD19AF /* URTFileCell.m */; };
+		D0D096961E61992500CD19AF /* URTContentDemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D096951E61992500CD19AF /* URTContentDemoModel.m */; };
+		D0D0969C1E619FFF00CD19AF /* URTDataAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D0969B1E619FFF00CD19AF /* URTDataAPIService.m */; };
+		D0D096A11E61A23200CD19AF /* URTAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D096A01E61A23200CD19AF /* URTAppManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +34,16 @@
 		D0D0967E1E61821D00CD19AF /* URTInitialScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = URTInitialScreen.storyboard; sourceTree = "<group>"; };
 		D0D096801E61823400CD19AF /* URTFileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URTFileTableViewController.h; sourceTree = "<group>"; };
 		D0D096811E61823400CD19AF /* URTFileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URTFileTableViewController.m; sourceTree = "<group>"; };
-		D0D096841E61833300CD19AF /* URTFileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URTFileModel.h; sourceTree = "<group>"; };
-		D0D096851E61833300CD19AF /* URTFileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URTFileModel.m; sourceTree = "<group>"; };
+		D0D096841E61833300CD19AF /* URTFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URTFile.h; sourceTree = "<group>"; };
+		D0D096851E61833300CD19AF /* URTFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URTFile.m; sourceTree = "<group>"; };
 		D0D0968E1E6189CC00CD19AF /* URTFileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URTFileCell.h; sourceTree = "<group>"; };
 		D0D0968F1E6189CC00CD19AF /* URTFileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URTFileCell.m; sourceTree = "<group>"; };
+		D0D096941E61992500CD19AF /* URTContentDemoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URTContentDemoModel.h; sourceTree = "<group>"; };
+		D0D096951E61992500CD19AF /* URTContentDemoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URTContentDemoModel.m; sourceTree = "<group>"; };
+		D0D0969A1E619FFF00CD19AF /* URTDataAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URTDataAPIService.h; sourceTree = "<group>"; };
+		D0D0969B1E619FFF00CD19AF /* URTDataAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URTDataAPIService.m; sourceTree = "<group>"; };
+		D0D0969F1E61A23200CD19AF /* URTAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URTAppManager.h; sourceTree = "<group>"; };
+		D0D096A01E61A23200CD19AF /* URTAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URTAppManager.m; sourceTree = "<group>"; };
 		FB884AC8B9F1B3B51FC4DD95 /* Pods-URANTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URANTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URANTest/Pods-URANTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +97,7 @@
 		D0D0965E1E617BA200CD19AF /* URANTest */ = {
 			isa = PBXGroup;
 			children = (
+				D0D0969E1E61A1FE00CD19AF /* Services */,
 				D0D096871E61886100CD19AF /* Views */,
 				D0D096831E6182D200CD19AF /* Models */,
 				D0D096771E617C4400CD19AF /* Presentation */,
@@ -113,6 +123,8 @@
 			children = (
 				D0D096621E617BA200CD19AF /* AppDelegate.h */,
 				D0D096631E617BA200CD19AF /* AppDelegate.m */,
+				D0D0969F1E61A23200CD19AF /* URTAppManager.h */,
+				D0D096A01E61A23200CD19AF /* URTAppManager.m */,
 			);
 			name = "Application layer";
 			sourceTree = "<group>";
@@ -138,8 +150,10 @@
 		D0D096831E6182D200CD19AF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D0D096841E61833300CD19AF /* URTFileModel.h */,
-				D0D096851E61833300CD19AF /* URTFileModel.m */,
+				D0D096841E61833300CD19AF /* URTFile.h */,
+				D0D096851E61833300CD19AF /* URTFile.m */,
+				D0D096941E61992500CD19AF /* URTContentDemoModel.h */,
+				D0D096951E61992500CD19AF /* URTContentDemoModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -151,6 +165,15 @@
 				D0D0968F1E6189CC00CD19AF /* URTFileCell.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		D0D0969E1E61A1FE00CD19AF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D0D0969A1E619FFF00CD19AF /* URTDataAPIService.h */,
+				D0D0969B1E619FFF00CD19AF /* URTDataAPIService.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,11 +298,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D096A11E61A23200CD19AF /* URTAppManager.m in Sources */,
 				D0D096641E617BA200CD19AF /* AppDelegate.m in Sources */,
-				D0D096861E61833300CD19AF /* URTFileModel.m in Sources */,
+				D0D096861E61833300CD19AF /* URTFile.m in Sources */,
 				D0D096901E6189CC00CD19AF /* URTFileCell.m in Sources */,
 				D0D096821E61823400CD19AF /* URTFileTableViewController.m in Sources */,
+				D0D096961E61992500CD19AF /* URTContentDemoModel.m in Sources */,
 				D0D096611E617BA200CD19AF /* main.m in Sources */,
+				D0D0969C1E619FFF00CD19AF /* URTDataAPIService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

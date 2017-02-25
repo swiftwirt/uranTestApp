@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "URTAppManager.h"
 
 @interface URTFileTableViewController : UITableViewController
+
+@property (nonatomic, strong) URTAppManager *appManager;
 
 @end
