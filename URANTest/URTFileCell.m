@@ -10,8 +10,7 @@
 
 @interface URTFileCell()
 
-@property (strong, nonatomic) UIImage *folderImaage;
-@property (strong, nonatomic) UIImage *fileImaage;
+@property (nonatomic, strong) NSDateFormatter *formatter;
 
 @end
 
@@ -19,21 +18,17 @@
 
 -(void)setFileModel:(URTFile *)fileModel
 {
-    self.colorTagView.backgroundColor = fileModel.isBlue && !fileModel.isOrange ? [UIColor blueColor] : [UIColor orangeColor]; // for case when both color BOOL = true set orange as default
-    self.fileTypeImageView.image = fileModel.isFolder ? self.folderImaage : [self getFileTypeImageFrom:fileModel];
+    [self configureColorTags:fileModel];
+    self.fileTypeImageView.image = [self getFileTypeImageFrom:fileModel];
     self.fileNameLabel.text = fileModel.filename;
-    self.fileModifiedDateLabel.text = [NSString stringWithFormat:@"modified %@", fileModel.modDate.description];// TODO: Add formatter for Month 1, 2000
+    //Configure date format
+    [self.formatter setDateStyle:NSDateFormatterMediumStyle];
+    self.fileModifiedDateLabel.text = [NSString stringWithFormat:@"modified %@", [self.formatter stringFromDate:fileModel.modDate]];// TODO: Add formatter for Month 1, 2000
 }
 
 -(void)awakeFromNib
 {
     [super awakeFromNib];
-}
-
--(UIImage *)folderImaage
-{
-    if (!_folderImaage) [UIImage imageNamed:@"icon_folder"];
-    return _folderImaage;
 }
 
 -(UIImage *)getFileTypeImageFrom:(URTFile *) model
@@ -43,6 +38,30 @@
             return [UIImage imageNamed:@"icon_image"];
         case Movie:
             return [UIImage imageNamed:@"icon_movie"];
+        case Folder:
+            return [UIImage imageNamed:@"icon_folder"];
+    }
+}
+
+-(NSDateFormatter *)formatter
+{
+    if (!_formatter) self.formatter = [[NSDateFormatter alloc] init];
+    return _formatter;
+}
+
+-(void)configureColorTags:(URTFile *) model
+{
+    if (model.isBlue && model.isOrange) {
+        self.orangeColorolorTagView.backgroundColor = [UIColor orangeColor];
+        self.blueColorTagView.backgroundColor = [UIColor blueColor];
+    } else if (model.isBlue && !model.isOrange) {
+        [self.blueColorTagView setFrame:CGRectMake(0.0, 0.0, 5.0, self.contentView.frame.size.height)];
+        self.blueColorTagView.backgroundColor = [UIColor blueColor];
+    } else if (model.isOrange) {
+        self.orangeColorolorTagView.backgroundColor = [UIColor orangeColor];
+    } else {
+        self.orangeColorolorTagView.hidden = true;
+        self.blueColorTagView.hidden = true;
     }
 }
 

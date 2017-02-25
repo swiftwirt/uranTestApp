@@ -11,6 +11,7 @@
 typedef NS_ENUM(NSUInteger, FileType) {
     Image = 0,
     Movie = 1,
+    Folder = 2
 };
 
 @interface URTFile : NSObject

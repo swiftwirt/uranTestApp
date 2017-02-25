@@ -11,7 +11,6 @@
 
 @interface URTContentDemoModel()
 
-@property (nonatomic, strong) URTFile *file;
 @property (nonatomic, strong) NSMutableArray *files;// of URTFile
 
 @end
@@ -22,19 +21,38 @@
 {
     self = [super init];
     if (self) {
-        for (int i = 0; i <= 5; i++) {
-            self.file.fileType = i % 3; // Sets file types
-            // TODO: Add folder config
-            [self.files addObject:self.file];
-        }
+        URTFile *file1 = [URTFile new];
+        file1.fileType = 0;
+        file1.filename = @"Book";
+        file1.modDate = [NSDate new];
+        file1.isBlue = YES;
+        [self.files addObject:file1];
+        
+        URTFile *file2 = [URTFile new];
+        file2.fileType = 0;
+        file2.filename = @"Picture";
+        file2.modDate = [NSDate new];
+        file2.isOrange = YES;
+        [self.files addObject:file2];
+        
+        URTFile *file3 = [URTFile new];
+        file3.fileType = 1;
+        file3.filename = @"Movie";
+        file3.modDate = [NSDate new];
+        file3.isBlue = NO;
+        file3.isOrange = NO;
+        [self.files addObject:file3];
+        
+        URTFile *file4 = [URTFile new];
+        file4.fileType = 2;
+        file4.filename = @"Folder";
+        file4.modDate = [NSDate new];
+        file4.isBlue = YES;
+        file4.isFolder = @"YES";
+        file4.isOrange = YES;
+        [self.files addObject:file4];
     }
     return self;
-}
-
--(URTFile *)file
-{
-    if (!_file) _file = [[URTFile alloc] init];
-    return _file;
 }
 
 -(NSMutableArray *)files

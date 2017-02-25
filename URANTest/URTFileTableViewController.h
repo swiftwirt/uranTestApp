@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MGSwipeTableCell/MGSwipeButton.h>
+#import <MGSwipeTableCell/MGSwipeTableCell.h>
 #import "URTAppManager.h"
 
-@interface URTFileTableViewController : UITableViewController
+@interface URTFileTableViewController : UITableViewController<MGSwipeTableCellDelegate>
 
 @property (nonatomic, strong) URTAppManager *appManager;
 
