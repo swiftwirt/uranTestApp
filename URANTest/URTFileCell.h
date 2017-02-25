@@ -11,7 +11,7 @@
 
 @interface URTFileCell : MGSwipeTableCell
 
-@property (weak, nonatomic) IBOutlet UIView *orangeColorolorTagView;
+@property (weak, nonatomic) IBOutlet UIView *orangeColorTagView;
 @property (weak, nonatomic) IBOutlet UIView *blueColorTagView;
 @property (weak, nonatomic) IBOutlet UIImageView *fileTypeImageView;
 @property (weak, nonatomic) IBOutlet UILabel *fileNameLabel;
