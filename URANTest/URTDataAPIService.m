@@ -13,7 +13,7 @@
 
 -(NSArray *)getAllFiles
 {
-    return [[URTContentDemoModel new] getAllFiles];
+    return [[[URTContentDemoModel alloc] initDemoModel] getAllFiles];
 }
 
 @end

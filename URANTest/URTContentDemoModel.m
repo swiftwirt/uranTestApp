@@ -37,6 +37,12 @@
     return _file;
 }
 
+-(NSMutableArray *)files
+{
+    if (!_files) _files = [NSMutableArray new];
+    return _files;
+}
+
 -(NSArray *)getAllFiles
 {
     return self.files;

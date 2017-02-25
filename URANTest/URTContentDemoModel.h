@@ -11,5 +11,6 @@
 @interface URTContentDemoModel : NSObject
 
 -(NSArray *)getAllFiles;// of URTFile
+-(instancetype)initDemoModel;//sort of conveniance init
 
 @end

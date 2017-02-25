@@ -15,7 +15,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UINavigationController *navigationController = (UINavigationController*)  self.window.rootViewController;
     URTFileTableViewController *fileTableViewController = (URTFileTableViewController*) navigationController.topViewController;
