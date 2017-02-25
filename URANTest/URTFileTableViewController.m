@@ -20,18 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initialSetUp];
 }
 
 #pragma mark - initial setup
 
 -(void)initialSetUp
 {
-    
-}
-
--(NSArray *)files
-{
-    return self.appManager.dataAPIService.getAllFiles;
+    self.files = self.appManager.dataAPIService.getAllFiles;
+    //Removes unused cells from view
+    self.tableView.tableFooterView = [UIView new];
 }
 
 #pragma mark - Table view data source
@@ -68,6 +66,21 @@
             NSLog(@"*** Unknown button tapped!");
         }
     return NO;
+}
+
+#pragma mark - UITableViewDelegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    URTFile *file = self.files[indexPath.row];
+    if ([file isKindOfClass:[URTFile class]]) {
+        if (file.isFolder) {
+            URTFileTableViewController *fileTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"URTFileTableViewController"];            fileTableViewController.appManager = self.appManager;
+            [self.navigationController pushViewController:fileTableViewController animated:YES];
+        } else {
+            NSLog(@"*** %@",file.filename);
+        }
+    }
 }
 
 @end

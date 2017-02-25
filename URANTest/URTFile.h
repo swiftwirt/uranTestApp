@@ -14,7 +14,7 @@ typedef NS_ENUM(NSUInteger, FileType) {
     Folder = 2
 };
 
-@interface URTFile : NSObject
+@interface URTFile : NSObject<NSCopying>
 
 @property (nonatomic, strong) NSString *filename;
 @property (nonatomic, strong) NSString *isFolder;

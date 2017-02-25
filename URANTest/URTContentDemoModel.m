@@ -23,7 +23,7 @@
     if (self) {
         URTFile *file1 = [URTFile new];
         file1.fileType = 0;
-        file1.filename = @"Book";
+        file1.filename = @"Photo";
         file1.modDate = [NSDate new];
         file1.isBlue = YES;
         [self.files addObject:file1];
