@@ -52,15 +52,15 @@
 -(void)configureColorTags:(URTFile *) model
 {
     if (model.isBlue && model.isOrange) {
-        self.orangeColorolorTagView.backgroundColor = [UIColor orangeColor];
+        self.orangeColorTagView.backgroundColor = [UIColor orangeColor];
         self.blueColorTagView.backgroundColor = [UIColor blueColor];
     } else if (model.isBlue && !model.isOrange) {
         [self.blueColorTagView setFrame:CGRectMake(0.0, 0.0, 5.0, self.contentView.frame.size.height)];
         self.blueColorTagView.backgroundColor = [UIColor blueColor];
     } else if (model.isOrange) {
-        self.orangeColorolorTagView.backgroundColor = [UIColor orangeColor];
+        self.orangeColorTagView.backgroundColor = [UIColor orangeColor];
     } else {
-        self.orangeColorolorTagView.hidden = true;
+        self.orangeColorTagView.hidden = true;
         self.blueColorTagView.hidden = true;
     }
 }
