@@ -10,9 +10,15 @@
 #import "URTFileCell.h"
 #import "URTFile.h"
 
+typedef NS_ENUM(NSInteger, ButtonPressed) {
+    Trash = 0,
+    Link = 1,
+    Star = 2
+};
+
 @interface URTFileTableViewController ()
 
-@property (nonatomic, strong) NSArray *files;
+@property (nonatomic, strong) NSArray *files;// of URTFile
 
 @end
 
@@ -52,14 +58,15 @@
 
 - (BOOL)swipeTableCell:(MGSwipeTableCell *)cell tappedButtonAtIndex:(NSInteger)index direction:(MGSwipeDirection)direction fromExpansion:(BOOL) fromExpansion
 {
-    switch (index) {
-        case 0:
+    ButtonPressed buttonPressed = index;
+    switch (buttonPressed) {
+        case Trash:
             NSLog(@"*** 🗑");
             break;
-        case 1:
+        case Link:
             NSLog(@"*** 🔗");
             break;
-        case 2:
+        case Star:
             NSLog(@"*** ⭐️");
             break;
         default:

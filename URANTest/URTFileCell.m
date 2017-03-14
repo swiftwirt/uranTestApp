@@ -23,7 +23,7 @@
     self.fileNameLabel.text = fileModel.filename;
     //Configure date format
     [self.formatter setDateStyle:NSDateFormatterMediumStyle];
-    self.fileModifiedDateLabel.text = [NSString stringWithFormat:@"modified %@", [self.formatter stringFromDate:fileModel.modDate]];// TODO: Add formatter for Month 1, 2000
+    self.fileModifiedDateLabel.text = [NSString stringWithFormat:@"modified %@", [self.formatter stringFromDate:fileModel.modDate]];
 }
 
 -(void)awakeFromNib

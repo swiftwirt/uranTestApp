@@ -51,6 +51,12 @@
         file4.isFolder = @"YES";
         file4.isOrange = YES;
         [self.files addObject:file4];
+        
+        [self.files addObject:file1];
+        [self.files addObject:file3];
+        [self.files addObject:file4];
+        [self.files addObject:file2];
+        [self.files addObject:file4];
     }
     return self;
 }

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, FileType) {
+typedef NS_ENUM(NSInteger, FileType) {
     Image = 0,
     Movie = 1,
     Folder = 2
